@@ -42,3 +42,8 @@
     8.impartirea proiectelor in categorii
     9.contorizarea cheltuielilor
     10.administrarea angajatilor in departamente
+    
+    
+    Etapa II
+    -adaugat service-uri de citire/scriere in fisier csv pentru fiecare clasa din pachetul Model
+    -adaugat Log service pentru monitorizarea actiunilor din service + ora modificarii
