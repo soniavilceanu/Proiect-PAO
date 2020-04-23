@@ -2,6 +2,7 @@ package repository;
 
 import model.CategorieProiect;
 import model.Job;
+import service.CategorieProiectInputService;
 
 import java.util.LinkedHashSet;
 import java.util.Set;
@@ -12,7 +13,7 @@ public class CategorieProiectRepository {
 
 
 
-    public CategorieProiectRepository(){ CategorieProiect = new LinkedHashSet<>(); }
+    public CategorieProiectRepository(){ CategorieProiect = CategorieProiectInputService.getInstance().citire(); }
 
 
 

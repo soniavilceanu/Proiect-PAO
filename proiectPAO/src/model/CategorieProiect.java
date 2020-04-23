@@ -9,7 +9,7 @@ public class CategorieProiect {
 
 
     public CategorieProiect(String categoryName) {
-        this.id = totalCategorii++;
+        this.id = ++totalCategorii;
         this.categoryName = categoryName;
     }
 

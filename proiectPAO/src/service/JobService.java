@@ -4,6 +4,8 @@ import model.Job;
 import repository.AngajatRepository;
 import repository.JobRepository;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Set;
 
 public class JobService {
@@ -57,6 +59,7 @@ public class JobService {
     }
 
     public String printJobs(){
+        LogService.getInstance().writeInLog("printare joburi", new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date()));
         return repo.printJobs();
     }
 

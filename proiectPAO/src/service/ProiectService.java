@@ -4,6 +4,8 @@ import model.Proiect;
 import repository.AngajatRepository;
 import repository.ProiectRepository;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Set;
 
 public class ProiectService {
@@ -61,6 +63,7 @@ public class ProiectService {
     }
 
     public String printProjects(){
+        LogService.getInstance().writeInLog("printare proiecte", new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date()));
         return repo.printProjects();
     }
 

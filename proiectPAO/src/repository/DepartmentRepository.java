@@ -2,6 +2,7 @@ package repository;
 
 import model.Angajat;
 import model.Departament;
+import service.DepartamentInputService;
 
 import java.util.LinkedHashSet;
 import java.util.Set;
@@ -11,12 +12,10 @@ public class DepartmentRepository {
 
 
 
-    public DepartmentRepository(){
-        departaments = new LinkedHashSet<>();
-    }
+    public DepartmentRepository(){ departaments = DepartamentInputService.getInstance().citire(); }
 
     public void add(Departament d){ departaments.add(d); }
-    //public void remove(Departament d){departaments.remove(d);}
+    public void remove(Departament d){departaments.remove(d);}
 
     public Set<Departament> getDepartaments() {
         return departaments;

@@ -1,6 +1,7 @@
 package repository;
 
 import model.Angajat;
+import service.AngajatInputService;
 
 import java.util.LinkedHashSet;
 import java.util.Set;
@@ -11,7 +12,7 @@ public class AngajatRepository {
 
 
 
-    public AngajatRepository(){ angajati = new LinkedHashSet<>(); }
+    public AngajatRepository(){ angajati = AngajatInputService.getInstance().citire(); }
 
     public void add(Angajat a){
         angajati.add(a);

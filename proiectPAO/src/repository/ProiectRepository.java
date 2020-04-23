@@ -2,6 +2,7 @@ package repository;
 
 import model.Job;
 import model.Proiect;
+import service.ProiectInputService;
 
 import java.util.LinkedHashSet;
 import java.util.Set;
@@ -11,7 +12,7 @@ public class ProiectRepository {
 
 
 
-    public ProiectRepository(){ projects = new LinkedHashSet<>(); }
+    public ProiectRepository(){ projects = ProiectInputService.getInstance().citire(); }
 
     public void add(Proiect p){
         projects.add(p);

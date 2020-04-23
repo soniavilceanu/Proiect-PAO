@@ -1,6 +1,7 @@
 package repository;
 
 import model.Cheltuieli;
+import service.CheltuieliInputService;
 
 import java.util.LinkedHashSet;
 import java.util.Set;
@@ -11,7 +12,7 @@ public class CheltuieliRepository {
 
 
 
-    public CheltuieliRepository(){ Cheltuieli = new LinkedHashSet<>(); }
+    public CheltuieliRepository(){ Cheltuieli = CheltuieliInputService.getInstance().citire(); }
 
     public void add(Cheltuieli c){
         Cheltuieli.add(c);

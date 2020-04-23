@@ -2,6 +2,7 @@ package repository;
 
 import model.Job;
 import model.Manager;
+import service.ManagerInputService;
 
 import java.util.LinkedHashSet;
 import java.util.Set;
@@ -11,7 +12,7 @@ public class ManagerRepository {
 
 
 
-    public ManagerRepository(){ Manageri = new LinkedHashSet<>(); }
+    public ManagerRepository(){ Manageri = ManagerInputService.getInstance().citire(); }
 
     public void add(Manager m){
         Manageri.add(m);

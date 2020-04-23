@@ -5,6 +5,8 @@ import repository.AngajatRepository;
 import repository.ManagerRepository;
 
 import javax.print.DocFlavor;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Set;
 
 public class ManagerService {
@@ -81,6 +83,7 @@ public class ManagerService {
     }
 
     public String printManageri(){
+        LogService.getInstance().writeInLog("printare manageri", new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date()));
         return repo.printManageri();
     }
 

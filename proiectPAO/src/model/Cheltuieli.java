@@ -31,7 +31,7 @@ public class Cheltuieli extends Buget{
     }
 
     public String toStringy(){
-        return "Date cheltuieli:\nId: " + id + "\nComision " + commission + "\nNr total de cheltuieli: " + totalCheltuieli +"\n" + "\n";
+        return "Date cheltuieli:\nId: " + id + "\nComision " + commission + "\nNr total de cheltuieli: " + totalCheltuieli +"\nTotal depozit: " + totalDepozit + "\n";
 
     }
 }

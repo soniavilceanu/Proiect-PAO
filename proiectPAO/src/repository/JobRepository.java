@@ -2,6 +2,7 @@ package repository;
 
 import model.Angajat;
 import model.Job;
+import service.JobInputService;
 
 import java.util.LinkedHashSet;
 import java.util.Set;
@@ -11,7 +12,7 @@ public class JobRepository {
 
 
 
-    public JobRepository(){ jobs = new LinkedHashSet<>(); }
+    public JobRepository(){ jobs = JobInputService.getInstance().citire(); }
 
     public void add(Job j){
         jobs.add(j);

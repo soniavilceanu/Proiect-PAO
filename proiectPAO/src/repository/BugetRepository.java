@@ -1,6 +1,8 @@
 package repository;
 
 import model.Buget;
+import service.AngajatInputService;
+import service.BugetInputService;
 
 import java.util.LinkedHashSet;
 import java.util.Set;
@@ -11,7 +13,7 @@ public class BugetRepository {
 
 
 
-    public BugetRepository(){ bugete = new LinkedHashSet<>(); }
+    public BugetRepository(){ bugete = BugetInputService.getInstance().citire(); }
 
     public void add(Buget b){
         bugete.add(b);
