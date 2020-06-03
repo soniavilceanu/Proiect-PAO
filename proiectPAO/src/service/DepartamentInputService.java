@@ -42,7 +42,7 @@ public class DepartamentInputService{
 
                 String[] date = line.split(cvsSplitBy);
 
-                dep.add(new Departament(date[0], parseInt(date[1]), parseInt(date[2])));
+                dep.add(new Departament(date[0], parseInt(date[1])));
             }
 
         } catch (IOException e) {

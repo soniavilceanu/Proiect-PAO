@@ -9,13 +9,16 @@ public class Departament {
     private String departmentName;
     private int managerId;
     private AngajatRepository angajati;
+    private static int totalDepartamente = 0;
 
 
 
 
-    public Departament(String departmentName, int departmentId, int managerId){
+
+    public Departament(String departmentName, int managerId){
         this.nrAngajati = 0;
-        this.departmentId = departmentId;
+        totalDepartamente++;
+        this.departmentId = totalDepartamente;
         this.managerId = managerId;
         this.departmentName = departmentName;
     }

@@ -6,6 +6,8 @@ public class Job {
     private String job_title;
     private float minSalary;
     private float maxSalary;
+    private static int totalJobs = 0;
+
 
 
     public float averageSalary(){
@@ -13,8 +15,9 @@ public class Job {
     }
 
 
-    public Job(int job_id, String job_title, float minSalary, float maxSalary) {
-        this.job_id = job_id;
+    public Job(String job_title, float minSalary, float maxSalary) {
+        totalJobs++;
+        this.job_id = totalJobs;
         this.job_title = job_title;
         this.maxSalary = maxSalary;
         this.minSalary = minSalary;

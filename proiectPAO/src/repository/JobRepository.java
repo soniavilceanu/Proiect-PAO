@@ -17,7 +17,7 @@ public class JobRepository {
     public void add(Job j){
         jobs.add(j);
     }
-    //public void remove(Job j){ jobs.remove(j); }
+    public void remove(Job j){ jobs.remove(j); }
 
     public Set<Job> getjobs() { return jobs; }
 

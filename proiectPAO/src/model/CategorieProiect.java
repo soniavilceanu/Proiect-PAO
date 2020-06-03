@@ -2,9 +2,10 @@ package model;
 
 public class CategorieProiect {
 
-    private String categoryName;
     private static int totalCategorii = 0;
     private final int id;
+    private String categoryName;
+
 
 
 

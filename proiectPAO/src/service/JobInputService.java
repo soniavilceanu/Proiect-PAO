@@ -42,7 +42,7 @@ public class JobInputService{
 
                 String[] date = line.split(cvsSplitBy);
 
-                jobs.add(new Job(parseInt(date[0]), date[1], parseFloat(date[2]), parseFloat(date[3])));
+                jobs.add(new Job(date[0], parseFloat(date[1]), parseFloat(date[2])));
             }
 
         } catch (IOException e) {

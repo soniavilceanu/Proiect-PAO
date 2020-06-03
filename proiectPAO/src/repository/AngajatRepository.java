@@ -17,6 +17,8 @@ public class AngajatRepository {
     public void add(Angajat a){
         angajati.add(a);
     }
+
+
     public void remove(Angajat a){ angajati.remove(a); }
 
 

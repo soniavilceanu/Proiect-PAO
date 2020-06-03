@@ -1,8 +1,10 @@
 package service;
 
 import model.CategorieProiect;
+import repository.CategorieProiectDBRepo;
 import repository.CategorieProiectRepository;
 
+import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Set;
@@ -10,10 +12,10 @@ import java.util.Set;
 public class CategorieProiectService {
 
     private static CategorieProiectService instance;
-    private CategorieProiectRepository repo;
+    private CategorieProiectDBRepo repo;
 
     private CategorieProiectService(){
-        repo = new CategorieProiectRepository();
+        repo = new CategorieProiectDBRepo();
     }
 
     public static CategorieProiectService getInstance(){
@@ -28,30 +30,30 @@ public class CategorieProiectService {
         repo.add(cp);
     }
 
-    public void remove(CategorieProiect cp){
+    public void remove(CategorieProiect cp) throws SQLException {
         LogService.getInstance().writeInLog("removed CategorieProiect", new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date()));
         repo.remove(cp);
     }
 
-    public Set<CategorieProiect> getCategorieProiect(){
+    public Set<CategorieProiect> getCategorieProiect() throws SQLException {
         LogService.getInstance().writeInLog("cautare CategorieProiect", new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date()));
 
         return repo.getCategorieProiect();
     }
 
-    public CategorieProiect getCategorieProiectByName(String categoryName){
+    public CategorieProiect getCategorieProiectByName(String categoryName) throws SQLException {
         LogService.getInstance().writeInLog("cautare CategorieProiect dupa nume", new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date()));
 
         return repo.getCategorieProiectByName(categoryName);
     }
 
-    public CategorieProiect getCategorieProiectById(int id){
+    public CategorieProiect getCategorieProiectById(int id) throws SQLException {
         LogService.getInstance().writeInLog("cautare CategorieProiect dupa id", new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date()));
 
         return repo.getCategorieProiectById(id);
     }
 
-    public boolean setCategoryName(int id, String name){
+    public boolean setCategoryName(int id, String name) throws SQLException {
         LogService.getInstance().writeInLog("setare nume CategorieProiect", new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date()));
 
         return repo.setCategoryName(id,name);
@@ -62,11 +64,11 @@ public class CategorieProiectService {
 
         return repo.removeById(id);
     }
-
+/*
     public String printCategorieProiect(){
         LogService.getInstance().writeInLog("printare categorii proiect", new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date()));
 
         return repo.printCategorieProiect();
     }
-
+*/
 }

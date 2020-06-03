@@ -4,6 +4,7 @@ import model.Angajat;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.LinkedHashSet;
@@ -90,7 +91,7 @@ public class AngajatInputService{
             LogService.getInstance().writeInLog("scriere angajati in fisier", new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date()));
 
 
-        } catch (final IOException exception) {
+        } catch (final IOException | SQLException exception) {
             exception.printStackTrace();
         }
     }

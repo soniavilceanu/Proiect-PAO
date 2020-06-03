@@ -2,11 +2,11 @@ package model;
 
 public class Angajat {
     private static int totalAnjajati = 0;
+    protected int id;
     protected String lastName;
     protected String firstName;
     protected String departmentName;
     protected float salary;
-    protected int id;
     protected int job_id;
 
     //functii get

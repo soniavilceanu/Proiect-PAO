@@ -1,8 +1,10 @@
 package service;
 
 import model.Angajat;
+import repository.AngajatDBRepo;
 import repository.AngajatRepository;
 
+import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -13,11 +15,11 @@ import java.util.Set;
 
 public class AngajatService {
     private static AngajatService instance;
-    private AngajatRepository repo;
+    private AngajatDBRepo repo;
 
     //constructor
     private AngajatService(){
-        repo = new AngajatRepository();
+        repo = new AngajatDBRepo();
     }
     public static AngajatService getInstance(){
         if(instance == null){
@@ -31,7 +33,7 @@ public class AngajatService {
 
 
 
-    public Set<Angajat> getAngajati(){
+    public Set<Angajat> getAngajati() throws SQLException {
         return repo.getAngajati();
     }
     public void add(Angajat a){
@@ -42,69 +44,72 @@ public class AngajatService {
         LogService.getInstance().writeInLog("removed angajat", new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date()));
         repo.removeById(id);
     }
-    public void remove(Angajat a){
+    public void remove(Angajat a) throws SQLException {
         LogService.getInstance().writeInLog("removed angajat", new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date()));
         repo.remove(a);
     }
 
 
-    public Set<Angajat> getAngajatiByLastName(String LastName){
+    public Set<Angajat> getAngajatiByLastName(String LastName) throws SQLException {
         LogService.getInstance().writeInLog("cautare angajati cu LastName", new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date()));
         return repo.getAngajatiByLastName(LastName);
     }
-
+/*
     public Angajat getAngajatByLastName(String LastName) {
         LogService.getInstance().writeInLog("cautare primul angajat cu LastName", new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date()));
         return repo.getAngajatByLastName(LastName);
     }
-
-    public Set<Angajat> getAngajatiByFirstName(String FirstName){
-        LogService.getInstance().writeInLog("cautare angajati cu FirstName", new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date()));
-        return repo.getAngajatiByFirstName(FirstName);
-    }
-
-    public Angajat getAngajatByFirstName(String FirstName) {
+      public Angajat getAngajatByFirstName(String FirstName) {
         LogService.getInstance().writeInLog("cautare primul angajat cu FirstName", new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date()));
         return repo.getAngajatByFirstName(FirstName);
     }
 
-    public Angajat getAngajatById(int id){
+
+    */
+
+    public Set<Angajat> getAngajatiByFirstName(String FirstName) throws SQLException {
+        LogService.getInstance().writeInLog("cautare angajati cu FirstName", new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date()));
+        return repo.getAngajatiByFirstName(FirstName);
+    }
+
+
+    public Angajat getAngajatById(int id) throws SQLException {
         LogService.getInstance().writeInLog("cautare angajati dupa Id", new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date()));
         return repo.getAngajatById(id);
     }
 
-    public Set<Angajat> getAngajatiByDepartment(String department){
+    public Set<Angajat> getAngajatiByDepartment(String department) throws SQLException {
         LogService.getInstance().writeInLog("cautare angajati dupa department", new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date()));
         return repo.getAngajatiByDepartment(department);
     }
 
-    public Set<Angajat> getAngajatiBySalary(float salary){
+    public Set<Angajat> getAngajatiBySalary(float salary) throws SQLException {
         LogService.getInstance().writeInLog("cautare angajati dupa salary", new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date()));
 
         return repo.getAngajatiBySalary(salary);
     }
 
-    public Set<Angajat> getAngajatiByJobId(float job_id) {
+    public Set<Angajat> getAngajatiByJobId(int job_id) throws SQLException {
         LogService.getInstance().writeInLog("cautare angajati dupa jobId", new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date()));
 
         return repo.getAngajatiByJobId(job_id);
     }
 
-    public boolean setAngajatSalary(int id, float salary){
+    public boolean setAngajatSalary(int id, float salary) throws SQLException {
         LogService.getInstance().writeInLog("setare salary pt angajat", new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date()));
 
         return repo.setAngajatSalary(id, salary);
     }
 
-    public boolean setAngajatJob(int id, int job_id){
+    public boolean setAngajatJob(int id, int job_id) throws SQLException {
         LogService.getInstance().writeInLog("setare job angajat", new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date()));
 
         return repo.setAngajatJob(id,job_id);
     }
-
+/*
     public String printAngajati(){
         LogService.getInstance().writeInLog("printare angajati", new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date()));
         return repo.printAngajati();
     }
-
+*/
 }
