@@ -34,19 +34,19 @@ public class Main {
         //AngajatInputService.getInstance().scriere();
 
         BugetService bug = BugetService.getInstance();
-        System.out.println(bug.printBugete());
+        //System.out.println(bug.printBugete());
 
 
         CheltuieliService chl = CheltuieliService.getInstance();
-        System.out.println(chl.printCheltuieli());
+       // System.out.println(chl.printCheltuieli());
 
 
         ManagerService man = ManagerService.getInstance();
-        System.out.println(man.printManageri());
+        //System.out.println(man.printManageri());
 
 
         ProiectService pro = ProiectService.getInstance();
-        System.out.println(pro.printProjects());
+        //System.out.println(pro.printProjects());
 
     }
 }

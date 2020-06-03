@@ -43,7 +43,8 @@ public class AngajatDBRepo {
         Set<Angajat> angajati = null;
         ResultSet result = statement.executeQuery();
         while (result.next()){
-            Angajat ang = new Angajat(result.getString(3),result.getString(2),result.getFloat(4),result.getString(1),result.getInt(5));
+
+            Angajat ang = new Angajat(result.getString(4),result.getString(3),result.getFloat(5),result.getString(2),result.getInt(6));
 
             if(angajati != null) angajati.add(ang);
             else {

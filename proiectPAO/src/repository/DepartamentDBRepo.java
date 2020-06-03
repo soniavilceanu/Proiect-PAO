@@ -47,7 +47,7 @@ public class DepartamentDBRepo {
         Set<Departament> Departaments = null;
         ResultSet result = statement.executeQuery();
         while (result.next()){
-            Departament ang = new Departament(result.getString(1),result.getInt(2));
+            Departament ang = new Departament(result.getString(2),result.getInt(3));
 
             if(Departaments != null) Departaments.add(ang);
             else Departaments = new LinkedHashSet<>();

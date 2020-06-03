@@ -46,7 +46,7 @@ public class JobDBRepo {
         Set<Job> Jobs = null;
         ResultSet result = statement.executeQuery();
         while (result.next()){
-            Job ang = new Job(result.getString(1),result.getFloat(2),result.getFloat(3));
+            Job ang = new Job(result.getString(2),result.getFloat(3),result.getFloat(4));
 
             if(Jobs != null) Jobs.add(ang);
             else Jobs = new LinkedHashSet<>();
