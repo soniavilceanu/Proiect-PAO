@@ -5,34 +5,55 @@
 ##Din pachetul model:
 
 Angajat
+
 Departament
+
 Manager
+
 Job
+
 Proiect
+
 CategorieProiect
+
 Buget
+
 Cheltuieli
 
 ##Din pachetul Repository:
 
 AngajatRepository
+
 DepartamentRepository
+
 ManagerRepository
+
 JobRepository
+
 ProiectRepository
+
 CategorieProiectRepository
+
 BugetRepository
+
 CheltuieliRepository
     
 ##Din pachetul Service:
  
 AngajatService
+
 DepartamentService
+
 ManagerService
+
 JobService
+
 ProiectService
+
 CategorieProiectService
+
 BugetService
+
 CheltuieliService
     
 ###Interogari care se pot face in cadrul sistemului:
