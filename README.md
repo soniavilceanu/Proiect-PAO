@@ -1,8 +1,8 @@
-#Proiect-PAO
+# Proiect-PAO
 
-###Lista tipuri de obiecte:
+### Lista tipuri de obiecte:
 
-##Din pachetul model:
+## Din pachetul model:
 
 Angajat
 
@@ -20,7 +20,7 @@ Buget
 
 Cheltuieli
 
-##Din pachetul Repository:
+## Din pachetul Repository:
 
 AngajatRepository
 
@@ -38,7 +38,7 @@ BugetRepository
 
 CheltuieliRepository
     
-##Din pachetul Service:
+## Din pachetul Service:
  
 AngajatService
 
@@ -56,20 +56,20 @@ BugetService
 
 CheltuieliService
     
-###Interogari care se pot face in cadrul sistemului:
+### Interogari care se pot face in cadrul sistemului:
 
-1.setare campurilor obiectelor: departamente, id-uri, salarii, manageri, comision
-2.cautare obiecte dupa id
-3.cautare obiecte dupa nume
-4.calcularea salariului mediu
-5.calcularea cheltuielii cu impozitul sustras
-6.atribuirea de proiecte unui manager
-7.asignarea angajatilor unui departament
-8.impartirea proiectelor in categorii
-9.contorizarea cheltuielilor
-10.administrarea angajatilor in departamente
+1. setare campurilor obiectelor: departamente, id-uri, salarii, manageri, comision
+2. cautare obiecte dupa id
+3. cautare obiecte dupa nume
+4. calcularea salariului mediu
+5. calcularea cheltuielii cu impozitul sustras
+6. atribuirea de proiecte unui manager
+7. asignarea angajatilor unui departament
+8. impartirea proiectelor in categorii
+9. contorizarea cheltuielilor
+10. administrarea angajatilor in departamente
     
     
-###Etapa II
--adaugat service-uri de citire/scriere in fisier csv pentru fiecare clasa din pachetul Model
--adaugat Log service pentru monitorizarea actiunilor din service + ora modificarii
+### Etapa II
+- adaugat service-uri de citire/scriere in fisier csv pentru fiecare clasa din pachetul Model
+- adaugat Log service pentru monitorizarea actiunilor din service + ora modificarii
